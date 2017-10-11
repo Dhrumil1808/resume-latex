@@ -1,0 +1,236 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.21in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+%\documentclass{article}
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{Dhrumil Shah}%{Last update on \today }
+
+\nobreakvspace{}
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+
+\noindent\href{mailto:dhrml.shah.at.gmail.dot.com}{dhrml.shah\mbox{}@\mbox{}gmail.com}\sbull
+\textsmaller{+}1 (626)766-6586\sbull
+{\newnums \href{https://github.com/Dhrumil1808}{Dhrumil1808 (Github)}\sbull
+{\mewmums \href{https://www.linkedin.com/in/dhrumil-shah-1808/}{www.linkedin.com/in/dhrumil-shah-1808}
+\\
+{San Jose\sbull
+California\sbull
+95112\sbull
+United States
+}
+
+\roottitle{Education}
+
+\headedsection
+  {\href{http://www.sjsu.edu/}{San Jose State University} }
+  {\textsc{ California , United States}} {%
+  \headedsubsection
+    {Master of Science in Software Engineering}
+    {Expected - Dec \apo18}
+    {}
+}
+
+
+\headedsection
+  {\href{http://daiict.ac.in}{Dhirubhai Ambani Institute of Informatiomn and Communication Technology} }
+  {\textsc{Gujarat, India}} {%
+  \headedsubsection
+    {Bachelor of Technology in Information and Communication Technology }
+    {Graduated - May \apo16}
+    {}
+}
+
+\spacedhrule{0.0em}{-0.4em}
+
+\roottitle{Experience}
+
+
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.greenninja.org/}{Green Ninja}}
+  {\textsc{ California, United States}} {%
+  \headedsubsection
+    {Software Developer Intern}
+    {Jun \apo17 -- Aug \apo17}
+    {\bodytext
+    {
+    \begin{itemize}
+        \item  Migrated the old website in WordPress to ExpressJS and deployed the website on Amazon Elastic Beanstalk and designed pixel perfect and responsive front-end pages of the website in ReactJS and Bootstrap.
+        \item Created an automation tool which eases the task of curriculum developers of creating and uploading the lessons which are used by the elementary school teachers to teach students.
+        \item Created a bash script for backing up the database and notifies the admin if server goes down.
+        \item NodeJS | ReactJS | ExpressJS | Bootstrap | MySQL | Shell Script | Git | AWS | WordPress  | PHP
+    \end{itemize}}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.usrazor.com/}{USrazor}}
+  {\textsc{California, United States}} {%
+  \headedsubsection
+    {Freelance Web Developer}
+    {Feb \apo17 -- Apr \apo17}
+    {\bodytext
+    {
+    \begin{itemize}
+        \item Voluntarily developed an efficient and user-friendly e-commerce website for the company using Spring Boot Framework in Java.
+        \item Developed a highly efficient search engine for fetching the products based on the user inputs.
+        \item Java | Spring Boot | Bootstrap | MySQL | Git | REST Services
+    \end{itemize}}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.zersey.com/}{Zersey}}
+  {\textsc{Haryana, India}} {%
+  \headedsubsection
+    {Software Developer Intern}
+    {Jan \apo16 -- Dec \apo16}
+    {\bodytext
+    {
+    \begin{itemize}
+        \item Builed website using CodeIgniter Framework in PHP and used bootstrap and Google Material Design for front-end.
+        \item Developed APIs for fetching the photo stories and editorials of the users, integrated the Login APIs of Facebook and Google and integrated the SMS API for sending One Time Password(OTP) to the mobile phone.
+        \item PHP | CodeIgniter | MySQL | Bootstrap | Google Materials | REST Services
+    \end{itemize}}}
+}
+
+\spacedhrule{0.0em}{-0.4em}
+
+
+\roottitle{Academic Projects}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {{Distributed Chat System}
+  \textbf{
+  \small{(Java | Protobuf | Netty | MySQL | Redis)}}}
+  {\textsc{Fall \apo 17}} {%
+  
+    {\bodytext
+    {
+    \begin{itemize}
+        \item Design \& Develop scalable, loosely coupled, resilient distributed chat system, capable of handling multiple concurrent requests. 
+        \item Develop consensus algorithm for using Raft leader election strategy and Consistent Hashing for sharding and replication of messages using Protobuf, Java, Netty.
+    \end{itemize}}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {{Artificial Neural Network}
+  \textbf{
+  \small{(Python | Jupyter Notebook | TensorFlow | Dropout )}}}
+  {\textsc{ Fall \apo17}} {%
+  
+    {\bodytext
+    {
+    \begin{itemize}
+        \item Improved the accuracy of MNIST model to 98\% using multi-layer Artificial Neural Network.
+        \item Used Different activation functions like : sigmoid, Relu and Tanh and applied Dropout functions for improving the accuracy.
+        
+    \end{itemize}}}
+}
+
+
+\headedsection  % sets the header for the section and includes any subsections
+  {{UMLParser}
+  \textbf{
+  \small{(Java | JavaParser | Plantuml)}}}
+  {\textsc{Spring \apo17}} {%
+  
+    {\bodytext
+    {
+    \begin{itemize}
+        \item  Implemented a Java app, which takes an input as Java classes and converts them into the UML Class Diagram.
+        \item Built a functionality which exports diagrams to an image file. Agile methodologies and Kanban Board are used.
+    \end{itemize}}}
+}
+
+
+\headedsection  % sets the header for the section and includes any subsections
+ {{Shopping App}
+  \textbf{
+  \small{(Python | Flask | GCM | AWS EC2 | MySQL )}}}
+  {\textsc{Spring \apo17}} {%
+  
+    {\bodytext
+    {
+    \begin{itemize}
+        \item Applied data mining techniques like K-means algorithm and multivariate Linear Regression on the data-set to compute the number of days the groceries will last.
+        \item Integrated GCM (Google Cloud Messaging) for push notifications  and hosted  the application on AWS EC2.
+        \item Achieved an accuracy of 80\% on the testing data and took feedback and reviews from 200 users.
+        
+    \end{itemize}}}
+}
+
+
+}
+
+\spacedhrule{0.0em}{-0.4em}
+
+
+\roottitle{Skills}
+ {
+  \begin{itemize}
+      \item {Core Competencies:}  Data Structures, Algorithms, Operating Systems, Software Engineering
+      \item {Programming Languages:} Java, Python, JavaScript (mainly jQuery and ReactJS), PHP, Shell Script
+      \item {Web Technologies and databases:} NodeJs, ReactJS, Spring Boot, Bootstrap, REST services, Flask, AWS, IBM BlueMix,  MySQL, Redis
+      \item {Other:} Jupyter Notebook, Maven, Babel, Webpack , Grunt, Adobe Photoshop CS6, Sublime Text, Git,Spyder
+     
+  \end{itemize}  
+  }
+  
+\spacedhrule{0.0em}{-0.4em}
+ 
+\roottitle{Achievements}
+
+
+  {
+  \begin{itemize}
+      \item {My team named "IdeaPreneurs" was finalists (amongst the top 10 teams) out of the 50 teams at LinkedIn's "Intern Hackathon 2017".}
+     
+  \end{itemize}  
+  }
+   
+
+
+
+
+\spacedhrule{0.0em}{-0.4em}
+
+
+
+
+\end{document}
+\documentclass[oneside]{book}
